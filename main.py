@@ -1,4 +1,5 @@
 import os
+import random
 
 from flask import Flask, request, abort
 from linebot import LineBotApi, WebhookHandler
@@ -41,10 +42,14 @@ def callback():
 
 # https://qiita.com/mikan3rd/items/0e1bfe46e00cf434a126
 
+ero_omikuji = ['手マンされたい！', 'フェラされたい？', '電マつかって！'])
+random.shuffle(ero_omikuji)
+
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     line_bot_api.reply_message(event.reply_token,
-                               TextSendMessage(text='おっぱい'))  # text=event.message.text ← オウム返し
+                               TextSendMessage(text=ero_omikuji))  # text=event.message.text ← オウム返し
+
 
 
 if __name__ == '__main__':
