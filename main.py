@@ -48,7 +48,7 @@ random.shuffle(ero_omikuji)
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     line_bot_api.reply_message(event.reply_token,
-                               TextSendMessage(text=ero_omikuji))  # text=event.message.text ← オウム返し
+                               TextSendMessage(text=event.ero_omikuji.text))  # text=event.message.text ← オウム返し
 
 
 
