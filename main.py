@@ -42,7 +42,7 @@ def callback():
 
 # https://qiita.com/mikan3rd/items/0e1bfe46e00cf434a126
 
-ero_omikuji = ['手マンされたい！', 'フェラされたい？', '電マつかって！']
+ero_omikuji = ['手マンされたい！', 'フェラされたい？', '電マつかって！', '何回もいっちゃった']
 ero = random.choice(ero_omikuji)
 
 
