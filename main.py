@@ -43,12 +43,13 @@ def callback():
 # https://qiita.com/mikan3rd/items/0e1bfe46e00cf434a126
 
 ero_omikuji = ['手マンされたい！', 'フェラされたい？', '電マつかって！']
-random.shuffle(ero_omikuji)
+ero = random.choice(ero_omikuji)
+
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     line_bot_api.reply_message(event.reply_token,
-                               TextSendMessage(text=event.ero_omikuji.text))  # text=event.message.text ← オウム返し
+                               TextSendMessage(text=ero))  # text=event.message.text ← オウム返し
 
 
 
